@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'stone-scissors-paper-frontend';
+
+  title: string;
+
+  constructor() {
+    this.title = 'Stone Scissors Paper';
+  }
 }

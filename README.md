@@ -1,5 +1,21 @@
 # StoneScissorsPaperFrontend
 
+Frontend for a stone, scissor and paper game. The backend for this game [is here](https://github.com/padigru/stone-scissor-paper-backend).
+
+## Build the application as docker container
+
+To build the application as docker container run the following command in the root directory:
+
+`docker build -t stone-scissors-paper-frontend .`
+
+Start the application with:
+
+`docker run -it -p 80:80 stone-scissors-paper-frontend`
+
+## Run frontend and backend together
+
+You can use the docker-compose file or the helm charts in [this repository](https://github.com/padigru/stone-scissor-paper-deployment).
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
 ## Development server

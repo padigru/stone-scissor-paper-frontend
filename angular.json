@@ -10,6 +10,15 @@
           "strict": true
         }
       },
+      "architect": {
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "stone-scissors-paper-frontend:build",
+            "proxyConfig": "src/proxy.conf.json"
+          }
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
