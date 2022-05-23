@@ -4,14 +4,14 @@ import {GameComponent} from "./game/game.component";
 import {ResultComponent} from "./result/result.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'play', pathMatch: 'full'},
+  { path: '', redirectTo: 'play', pathMatch:'full' },
   { path: 'result', component: ResultComponent},
-  { path: '**', redirectTo: 'play', pathMatch: 'full'},
-  { path: 'play', component: GameComponent }
+  { path: 'play', component: GameComponent },
+  { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {useHash: true})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
