@@ -1,6 +1,6 @@
-# StoneScissorsPaperFrontend
+# Stone Scissors Paper Frontend
 
-Frontend for a stone, scissor and paper game. The backend for this game [is here](https://github.com/padigru/stone-scissor-paper-backend).
+Frontend for a stone, scissors and paper game. The backend for this game [is here](https://github.com/padigru/stone-scissor-paper-backend).
 
 ## Build the application as docker container
 
