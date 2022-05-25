@@ -11,6 +11,7 @@ import {GameResult} from "../model/game-result";
 })
 export class GameComponent implements OnInit {
   gameResult: GameResult | undefined;
+  errorMessage: string | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,10 +23,12 @@ export class GameComponent implements OnInit {
   playGame(playerChoice: string) {
     // @ts-ignore
     let choice = Choice[playerChoice];
-      this.gameService.play(choice).subscribe(data => {
+      this.gameService.play(choice).subscribe({next: (data) => {
         this.gameResult = data;
-        this.router.navigate(['/result'], {state: this.gameResult})
-      });
+        this.router.navigate(['/result'], {state: this.gameResult});
+      }, error: (err) =>{
+        this.errorMessage = 'Leider ist ein Fehler aufgetreten.'
+        }});
   }
 
   ngOnInit(): void {
