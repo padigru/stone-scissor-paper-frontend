@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpHeaders, HttpParams} from "@angular/common/http";
+import { HttpClient, HttpHeaders, HttpParams } from "@angular/common/http";
 import { GameResult } from "../model/game-result";
-import {catchError, Observable, retry} from "rxjs";
-import {Choice} from "../model/choice";
-import {environment} from "../../environments/environment";
+import {Observable, catchError, throwError} from "rxjs";
+import { Choice } from "../model/choice";
+import { environment } from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
